@@ -38,40 +38,15 @@ struct ThreadCell: View {
                                 .foregroundColor(Color(.darkGray))
                         }
                     }
-
+                    
                     
                     Text(thread.caption)
                         .font(.footnote)
                         .multilineTextAlignment(.leading)
                     
-                    HStack (spacing: 16){
-                        Button {
-                            
-                        } label: {
-                            Image(systemName: "heart")
-                        }
-                        
-                        Button {
-                            
-                        } label: {
-                            Image(systemName: "bubble.right")
-                        }
-                        
-                        Button {
-                            
-                        } label: {
-                            Image(systemName: "arrow.rectanglepath")
-                        }
-                        
-                        Button {
-                            
-                        } label: {
-                            Image(systemName: "paperplane")
-                        }
-                        
-                    }
-                    .padding(.vertical, 8)
-                    .foregroundColor(.black)
+                    ContentActionButtonView(thread: thread)
+                        .padding(.vertical, 8)
+                        .foregroundColor(.black)
                 }
             }
             Divider()
