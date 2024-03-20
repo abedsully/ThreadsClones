@@ -12,6 +12,7 @@ struct ThreadReplyView: View {
     @Environment (\.dismiss) var dismiss
     @State private var replyText = ""
     @State private var threadViewHeight: CGFloat = 24
+    @StateObject var viewModel = ThreadReplyViewModel()
     
     
     private var currentUser: User?{
@@ -22,11 +23,11 @@ struct ThreadReplyView: View {
         let imageDimension: CGFloat = ProfileImageSize.small.dimension
         let padding: CGFloat = 16
         let width = UIScreen.main.bounds.width - imageDimension - padding
-        let font = UIFont.systemFont(ofSize: 16)
+        let font = UIFont.systemFont(ofSize: 12)
         
         let captionSize = thread.caption.heightWithConstrainedWidth(width, font: font)
         
-        threadViewHeight = captionSize + imageDimension
+        threadViewHeight = captionSize + imageDimension - 16
     }
     
     var body: some View {
@@ -87,6 +88,7 @@ struct ThreadReplyView: View {
                 ToolbarItem(placement: .navigationBarTrailing) {
                     Button ("Post") {
                         Task {
+                            try await viewModel.uploadThreadReply(replyText: replyText, thread: thread)
                             dismiss()
                         }
                     }

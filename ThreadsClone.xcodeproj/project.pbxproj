@@ -37,6 +37,8 @@
 		A094234F2B8A32BF00EE1BCB /* UserContentListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A094234E2B8A32BF00EE1BCB /* UserContentListViewModel.swift */; };
 		A09423512B8A34B800EE1BCB /* Timestamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A09423502B8A34B800EE1BCB /* Timestamp.swift */; };
 		A09D4D6B2B97677C007F88A7 /* ThreadReplyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A09D4D6A2B97677C007F88A7 /* ThreadReplyView.swift */; };
+		A0C74CB42BA9D95400FB722B /* ThreadReplyService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0C74CB32BA9D95400FB722B /* ThreadReplyService.swift */; };
+		A0C74CB62BA9D9CB00FB722B /* ThreadReplyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0C74CB52BA9D9CB00FB722B /* ThreadReplyViewModel.swift */; };
 		A0CE38CD2B963ECB003EF8B8 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0CE38CC2B963ECB003EF8B8 /* Constant.swift */; };
 		A0DBFB652B87060F0077A3F3 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A0DBFB642B87060F0077A3F3 /* GoogleService-Info.plist */; };
 		A0DBFB682B8707B00077A3F3 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = A0DBFB672B8707B00077A3F3 /* FirebaseAnalytics */; };
@@ -113,6 +115,8 @@
 		A094234E2B8A32BF00EE1BCB /* UserContentListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserContentListViewModel.swift; sourceTree = "<group>"; };
 		A09423502B8A34B800EE1BCB /* Timestamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Timestamp.swift; sourceTree = "<group>"; };
 		A09D4D6A2B97677C007F88A7 /* ThreadReplyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreadReplyView.swift; sourceTree = "<group>"; };
+		A0C74CB32BA9D95400FB722B /* ThreadReplyService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreadReplyService.swift; sourceTree = "<group>"; };
+		A0C74CB52BA9D9CB00FB722B /* ThreadReplyViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreadReplyViewModel.swift; sourceTree = "<group>"; };
 		A0CE38CC2B963ECB003EF8B8 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		A0DBFB642B87060F0077A3F3 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		A0DBFBA12B8719E20077A3F3 /* RegistrationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewModel.swift; sourceTree = "<group>"; };
@@ -529,6 +533,7 @@
 		A09D4D692B97675E007F88A7 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				A0C74CB52BA9D9CB00FB722B /* ThreadReplyViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -634,6 +639,7 @@
 		A0ED6B952B9CC63A0052110D /* Service */ = {
 			isa = PBXGroup;
 			children = (
+				A0C74CB32BA9D95400FB722B /* ThreadReplyService.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -777,12 +783,14 @@
 				A0DBFBB92B873A400077A3F3 /* CurrentUserProfileView.swift in Sources */,
 				A08B38A42B82511A007A5C32 /* ThreadsCloneApp.swift in Sources */,
 				A08B38C62B827A44007A5C32 /* ThreadsTabView.swift in Sources */,
+				A0C74CB42BA9D95400FB722B /* ThreadReplyService.swift in Sources */,
 				A0DBFBBE2B873D230077A3F3 /* ProfileHeaderView.swift in Sources */,
 				A08BB8BE2B83137300467A0E /* ExploreView.swift in Sources */,
 				A08BB8CB2B83140000467A0E /* ProfileView.swift in Sources */,
 				A0CE38CD2B963ECB003EF8B8 /* Constant.swift in Sources */,
 				A08B38C02B825C3F007A5C32 /* RegistrationView.swift in Sources */,
 				A0DBFBAC2B8729F10077A3F3 /* User.swift in Sources */,
+				A0C74CB62BA9D9CB00FB722B /* ThreadReplyViewModel.swift in Sources */,
 				A04E7B122B890AC700BFF9E1 /* ThreadService.swift in Sources */,
 				A09D4D6B2B97677C007F88A7 /* ThreadReplyView.swift in Sources */,
 			);
