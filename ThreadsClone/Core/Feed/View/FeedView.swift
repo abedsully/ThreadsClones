@@ -15,13 +15,18 @@ struct FeedView: View {
             ScrollView(showsIndicators: false) {
                 LazyVStack {
                     ForEach(viewModel.threads) { thread in
-                        ThreadCell(thread: thread)
+                        NavigationLink(value: thread){
+                            ThreadCell(thread: thread)
+                        }
                     }
                 }
             }
             .refreshable {
                 Task {try await viewModel.fetchThreads()}
             }
+            .navigationDestination(for: Thread.self, destination: { thread in
+                ThreadDetailView(thread: thread)
+            })
             .navigationTitle("Threads")
             .navigationBarTitleDisplayMode(.inline)
         }

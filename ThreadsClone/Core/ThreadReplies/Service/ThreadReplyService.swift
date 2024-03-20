@@ -17,4 +17,18 @@ struct ThreadReplyService {
             "replyCount": thread.replyCount + 1
         ])
     }
+    
+    static func fetchThreadReplies(forThread thread: Thread) async throws -> [ThreadReply]{
+        let snapshot = try await FirestoreConstants.RepliesCollection.whereField("threadID", isEqualTo: thread.id).getDocuments()
+        
+        return snapshot.documents.compactMap({try? $0.data(as: ThreadReply.self )})
+    }
+    
+    
+    
+    static func fetchThreadReplies(forUser user: User) async throws -> [ThreadReply] {
+        let snapshot = try await FirestoreConstants.RepliesCollection.whereField("threadOwnerUid", isEqualTo: user.id).getDocuments()
+        
+        return snapshot.documents.compactMap({try? $0.data(as: ThreadReply.self )})
+    }
 }

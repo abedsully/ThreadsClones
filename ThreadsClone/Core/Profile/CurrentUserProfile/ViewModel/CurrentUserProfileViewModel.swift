@@ -10,6 +10,7 @@ import Combine
 import PhotosUI
 import SwiftUI
 
+@MainActor
 class CurrentUserProfileViewModel: ObservableObject {
     @Published var currentUser: User?
 

@@ -54,11 +54,30 @@ struct UserContentListView: View {
             }
             
             LazyVStack {
-                ForEach(viewModel.threads) { thread in
-                    ThreadCell(thread: thread)
+                
+                switch selectedFilter {
+                case .threads:
+                    ForEach(viewModel.threads) { thread in
+                        ThreadCell(thread: thread)
+                            .transition(.move(edge: .leading))
+                    }
+                case .replies:
+                    ForEach(viewModel.replies) { replies in
+                        ThreadReplyProfileCell(reply: replies)
+                            .transition(.move(edge: .trailing))
+                    }
                 }
+                
+                
             }
         }
         .padding(.vertical, 8)
+    }
+}
+
+
+struct UserContentListView_Previews: PreviewProvider {
+    static var previews: some View {
+        UserContentListView(user: dev.user)
     }
 }

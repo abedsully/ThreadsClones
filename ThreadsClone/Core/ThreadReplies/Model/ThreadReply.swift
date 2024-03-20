@@ -11,7 +11,7 @@ import FirebaseFirestoreSwift
 struct ThreadReply: Identifiable, Codable {
     @DocumentID var replyId: String?
     let threadID: String
-    let threadReply: String
+    let replyText: String
     let threadReplyOwnerUid: String
     let threadOwnerUid: String
     let timestamp: Timestamp
